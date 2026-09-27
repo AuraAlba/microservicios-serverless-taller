@@ -1,0 +1,12 @@
+{
+  "name": "gateway",
+  "version": "1.0.0",
+  "description": "API Gateway de la pizzeria. Unico punto de entrada: reenvia las peticiones al microservicio que corresponde.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

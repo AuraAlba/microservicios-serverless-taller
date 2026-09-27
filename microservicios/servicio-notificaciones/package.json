@@ -1,0 +1,12 @@
+{
+  "name": "servicio-notificaciones",
+  "version": "1.0.0",
+  "description": "Microservicio de notificaciones de la pizzeria. Avisa cuando un pedido se confirma. (Lo completa el estudiante en la Seccion 13).",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

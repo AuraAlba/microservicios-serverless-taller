@@ -1,0 +1,12 @@
+{
+  "name": "servicio-pagos",
+  "version": "1.0.0",
+  "description": "Microservicio de pagos de la pizzeria. Simula el cobro de un pedido.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "funcion-pedido",
+  "version": "1.0.0",
+  "description": "Funcion Serverless de ejemplo para el taller de la pizzeria.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server-local.js"
+  }
+}

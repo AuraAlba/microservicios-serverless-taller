@@ -1,0 +1,9 @@
+# Dependencias descargadas por npm (se regeneran con "npm install")
+node_modules/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Carpeta de despliegue de Vercel (si usas el Camino B de Serverless)
+.vercel

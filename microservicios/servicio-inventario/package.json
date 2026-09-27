@@ -1,0 +1,12 @@
+{
+  "name": "servicio-inventario",
+  "version": "1.0.0",
+  "description": "Microservicio de inventario de la pizzeria. Controla el stock de cada pizza.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

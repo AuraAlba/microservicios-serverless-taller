@@ -1,0 +1,12 @@
+{
+  "name": "servicio-pedidos",
+  "version": "1.0.0",
+  "description": "Microservicio de pedidos de la pizzeria. Recibe el pedido del cliente y coordina inventario y pagos.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
