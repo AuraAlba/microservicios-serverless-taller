@@ -16,7 +16,7 @@ const URL_PAGOS = "http://localhost:3003";
 const URL_NOTIFICACIONES = "http://localhost:3004";
 
 // Seccion 14: poner en true solo cuando notificaciones este corriendo
-const NOTIFICACIONES_ACTIVAS = false;
+const NOTIFICACIONES_ACTIVAS = true;
 
 // Tiempo maximo de espera a otro servicio, en ms (Actividad 5: cambiar este valor)
 const TIMEOUT_MS = 5000;

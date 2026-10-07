@@ -9,23 +9,24 @@ app.use(express.json());
 const PUERTO = 3004;
 
 app.post("/notificaciones", (req, res) => {
-  // COMPLETAR (Paso 1): leer pedidoId y pizza del body.
-  // const { pedidoId, pizza } = req.body;
+  // Paso 1: Obtener pedidoId y pizza desde el cuerpo de la petición (req.body)
+  const { pedidoId, pizza } = req.body;
 
-  // COMPLETAR (Paso 2): mostrar el aviso en consola.
-  // console.log(`[NOTIFICACIONES] Aviso: tu pedido ${pedidoId} de pizza ${pizza} esta confirmado.`);
+  // Validar que los datos necesarios están presentes
+  if (!pedidoId || !pizza) {
+    return res.status(400).json({
+      success: false,
+      message: "Faltan datos obligatorios: 'pedidoId' o 'pizza'",
+    });
+  }
 
-  // COMPLETAR (Paso 3): responder con exito y borrar la respuesta temporal de abajo.
-  // return res.json({
-  //   success: true,
-  //   message: `Notificacion enviada para el pedido ${pedidoId}`,
-  // });
+  // Paso 2: Mostrar el mensaje de confirmación en la consola
+  console.log(`[NOTIFICACIONES] Aviso: tu pedido ${pedidoId} de pizza ${pizza} esta confirmado.`);
 
-  // Respuesta temporal (borrala al terminar)
-  res.status(501).json({
-    success: false,
-    message:
-      "Este servicio todavia no esta completo. Sigue los pasos 'COMPLETAR' en index.js.",
+  // Paso 3: Responder con éxito
+  return res.json({
+    success: true,
+    message: `Notificacion enviada para el pedido ${pedidoId}`,
   });
 });
 

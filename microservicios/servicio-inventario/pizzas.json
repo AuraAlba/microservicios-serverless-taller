@@ -2,31 +2,55 @@
   "margarita": {
     "nombre": "Margarita",
     "precio": 18000,
-    "ingredientes": ["salsa de tomate", "mozzarella", "albahaca"],
-    "stock": 5
+    "ingredientes": [
+      "salsa de tomate",
+      "mozzarella",
+      "albahaca"
+    ],
+    "stock": 4
   },
   "hawaiana": {
     "nombre": "Hawaiana",
     "precio": 22000,
-    "ingredientes": ["salsa de tomate", "mozzarella", "jamón", "piña"],
-    "stock": 5
+    "ingredientes": [
+      "salsa de tomate",
+      "mozzarella",
+      "jamón",
+      "piña"
+    ],
+    "stock": 3
   },
   "pepperoni": {
     "nombre": "Pepperoni",
     "precio": 24000,
-    "ingredientes": ["salsa de tomate", "mozzarella", "pepperoni"],
-    "stock": 5
+    "ingredientes": [
+      "salsa de tomate",
+      "mozzarella",
+      "pepperoni"
+    ],
+    "stock": 3
   },
   "vegetariana": {
     "nombre": "Vegetariana",
     "precio": 21000,
-    "ingredientes": ["salsa de tomate", "mozzarella", "pimentón", "champiñones", "cebolla"],
-    "stock": 5
+    "ingredientes": [
+      "salsa de tomate",
+      "mozzarella",
+      "pimentón",
+      "champiñones",
+      "cebolla"
+    ],
+    "stock": 0
   },
   "pollo": {
     "nombre": "Pollo",
     "precio": 23000,
-    "ingredientes": ["salsa de tomate", "mozzarella", "pollo", "maíz"],
-    "stock": 5
+    "ingredientes": [
+      "salsa de tomate",
+      "mozzarella",
+      "pollo",
+      "maíz"
+    ],
+    "stock": 4
   }
 }

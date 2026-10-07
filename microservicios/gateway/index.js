@@ -3,11 +3,6 @@
 // servicio (localhost:3000) y el gateway reenvia cada peticion al microservicio
 // que corresponde. El cliente no necesita saber que detras hay 4 servicios
 // distintos en 4 puertos distintos.
-//
-// API Gateway del taller:
-//   - Las rutas de PEDIDOS y NOTIFICACIONES ya estan resueltas como ejemplo.
-//   - Tu completas las rutas de INVENTARIO y PAGOS siguiendo el mismo patron.
-//   - Tu agregas un middleware simple de logging (bloque COMPLETAR mas abajo).
 
 const express = require("express");
 
@@ -26,11 +21,9 @@ const URL_NOTIFICACIONES = "http://localhost:3004";
 // Middleware de logging
 // -------------------------------------------------------------------
 app.use((req, res, next) => {
-  // COMPLETAR: registra en consola cada peticion que entra al gateway,
-  // mostrando el metodo y la ruta pedida (por ejemplo: "[GATEWAY] POST /pedidos").
-  // Pista: un middleware de Express recibe (req, res, next) y al terminar debe
-  // llamar a next() para dejar pasar la peticion.
-  throw new Error("COMPLETAR: falta el middleware de logging del gateway.");
+  // Muestra en consola el método HTTP y la ruta original de la petición
+  console.log(`[GATEWAY] ${req.method} ${req.originalUrl}`);
+  next(); // Continuar con la siguiente función/ruta
 });
 
 // -------------------------------------------------------------------
@@ -77,21 +70,16 @@ app.post("/notificaciones", (req, res) => {
 
 // INVENTARIO
 app.all("/inventario", (req, res) => {
-  // COMPLETAR: reenvia esta peticion a inventario usando reenviar().
-  // El destino es la URL de inventario mas la ruta /inventario.
-  throw new Error("COMPLETAR: falta proxear la ruta /inventario.");
+  reenviar(`${URL_INVENTARIO}/inventario`, req, res);
 });
+
 app.all("/inventario/:pizza", (req, res) => {
-  // COMPLETAR: reenvia esta peticion a inventario usando reenviar(),
-  // incluyendo el nombre de la pizza que viene en la ruta.
-  throw new Error("COMPLETAR: falta proxear la ruta /inventario/:pizza.");
+  reenviar(`${URL_INVENTARIO}/inventario/${req.params.pizza}`, req, res);
 });
 
 // PAGOS
 app.all("/pagos", (req, res) => {
-  // COMPLETAR: reenvia esta peticion a pagos usando reenviar().
-  // El destino es la URL de pagos mas la ruta /pagos.
-  throw new Error("COMPLETAR: falta proxear la ruta /pagos.");
+  reenviar(`${URL_PAGOS}/pagos`, req, res);
 });
 
 app.get("/", (req, res) => {
